@@ -1,0 +1,69 @@
+\documentclass[12pt, letterpaper]{amsart}
+
+\title{Document_Name}
+\author{Ismael Lopez}
+
+
+% Packages
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\rhead{Ismael Lopez}
+	\makeatletter
+	\lhead{\@title}
+	\cfoot{\thepage}
+	\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+\usepackage{eucal}
+
+% Over-full
+\vfuzz2pt
+\hfuzz2pt
+
+% Side Margins
+\evensidemargin 0.1in \oddsidemargin 0.1in
+
+% Paragraph Size
+\parindent24pt
+
+% Size of page
+\textheight 9.6in \textwidth 6.2in
+\baselineskip 9.6in \topmargin 0.005in
+
+% Commands
+\newcommand{\bl}{\Bigg(}
+\newcommand{\br}{\Bigg)}
+%\newcommand{\b}{\dbinom}
+
+% Standard Notation for Theorems and Lemmas
+\newtheorem{mydef}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{corollary}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{rmk}{Remark}[section]
+\newenvironment{remark}{\begin{rmk}\rm\baseenvskip}{\end{rmk}}
+\newtheorem{definition}[rmk]{Definition}
+
+% Numbering Eqns/Remarks
+\numberwithin{equation}{section} \numberwithin{thm}{section}
+\numberwithin{rmk}{section} \numberwithin{figure}{section}
+
+% Spacing
+\parskip=10pt
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Begin Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+Hello There
+\end{document}
