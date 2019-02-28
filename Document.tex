@@ -1,20 +1,20 @@
 \documentclass[12pt, letterpaper]{amsart}
 
-\title{Document_Name}
-\author{Ismael Lopez}
-
-
 % Packages
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{titling}
 \usepackage{fancyhdr}
 	\pagestyle{fancy}
-	\fancyhf{}
-	\rhead{\@author}
-	\makeatletter
-	\lhead{\@title}
+	\setlength{\headheight}{14pt}
+	\headwidth = 6.25in
+	\lhead{Assignment 3} \chead{CS 330}
+	%\lhead{CS 330} \chead{\thetitle}
+	\rhead{\theauthor}
 	\cfoot{\thepage}
-	\renewcommand{\footrulewidth}{0.4pt}
+	\rfoot{Problem \theProblem}
+	\renewcommand{\headrulewidth}{0.4pt} %bar thickness
+	\renewcommand{\footrulewidth}{0.4pt} %"           "
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{enumerate}
 \usepackage{eucal}
@@ -46,7 +46,6 @@
 \newtheorem{proposition}[thm]{Proposition}
 \newtheorem{conjecture}[thm]{Conjecture}
 \newtheorem{corollary}[thm]{Corollary}
-
 \theoremstyle{remark}
 \newtheorem{rmk}{Remark}[section]
 \newenvironment{remark}{\begin{rmk}\rm\baseenvskip}{\end{rmk}}
@@ -59,11 +58,30 @@
 % Spacing
 \parskip=10pt
 
+\newcommand{\class}[1]{#1\\}
+\newcommand{\professor}[1]{Prof. #1\\}
+
+% Problem/Solution 'boxes' where we type our work.
+\newcounter{Problem}[section]
+\newenvironment{Problem}{\newpage \refstepcounter{Problem} 
+   \noindent \textbf{Problem~\theProblem:} \rmfamily}{}
+\newenvironment{Solution}{\par \noindent \textit{Solution:}\rmfamily}{}
+
+\newenvironment{coverpage}{\begin{center}\topskip0pt \vspace*{\fill}}{
+\vspace{-2in}
+{\huge \thetitle} \vspace{0.5in} \par
+{\large \textbf{\thedate}} \par
+{\large \class{CS 330 - Discrete Structures}} \par \vspace{0.05in}
+{\large \professor{Reingold}} \par
+\vspace{0.4in}
+{\large \textbf{\theauthor}}
+
+\vspace*{\fill} \end{center}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Begin Document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-Hello There
+Text here
 \end{document}
