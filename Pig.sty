@@ -1,0 +1,113 @@
+% Packages -- comment what you don't need
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage[includeheadfoot,left=3cm,right=3cm,top=2cm,bottom=3cm]{geometry}
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\setlength{\headheight}{14pt}
+	\headwidth = 6.25in
+	\lhead{\thetitle} \chead{\course} \rhead{\theauthor}
+	\cfoot{\thepage}\rfoot{Problem \theProblem}
+	\renewcommand{\headrulewidth}{0.4pt} %bar thickness
+	\renewcommand{\footrulewidth}{0.4pt} %"           "
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+\usepackage{eucal}
+\usepackage{bm}
+%\usepackage{graphicx}
+%\usepackage{caption}
+
+% Over-full
+\vfuzz2pt
+\hfuzz2pt
+
+% Paragraph Size
+\parindent24pt
+
+% Size of page -- textheight seems to affect the footer A LOT
+\textheight 9.1in \textwidth 6.2in 
+\baselineskip 9.6in
+
+% Commands -- my custom macros, keep whatever you want
+	% Cover page macro
+	\newcommand{\cover}{\begin{coverpage}\end{coverpage}}
+
+	\newcommand{\class}[1]{#1\\}
+	\newcommand{\professor}[1]{Prof. #1\\}
+
+	% Bracket matrix
+	\newcommand{\m}[1]{\begin{bmatrix}#1\end{bmatrix}}
+	
+	% Laplace and Inverse Laplace
+	\newcommand{\lap}[1]{\mathcal{L}\left\{#1\right\}}
+	\newcommand{\ilap}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+
+	% Integrals and Derivatives (wrt time t)
+	\newcommand{\mint}[4]{\int_{#1}^{#2}{#3} \,d#4}
+	\newcommand{\deriv}[1]{\cfrac{d#1}{dt}}
+
+	% Containers -- (), {}, []
+	\newcommand{\set}[1]{\left\{#1\right\}}
+	\newcommand{\bra}[1]{\left[#1\right]}
+	\newcommand{\hug}[1]{\left(#1\right)}
+
+	% Infinite Limits
+	\newcommand{\ilim}[1]{\lim_{n\to\infty}#1}
+
+
+% Standard Notation for Theorems and Lemmas -- I barely use these at all
+\newtheorem{mydef}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{proposition}[thm]{Proposition}
+\newtheorem{conjecture}[thm]{Conjecture}
+\newtheorem{corollary}[thm]{Corollary}
+\theoremstyle{remark}
+\newtheorem{rmk}{Remark}[section]
+\newenvironment{remark}{\begin{rmk}\rm\baseenvskip}{\end{rmk}}
+\newtheorem{definition}[rmk]{Definition}
+
+% Numbering Eqns/Remarks
+\numberwithin{equation}{section} \numberwithin{thm}{section}
+\numberwithin{rmk}{section} \numberwithin{figure}{section}
+
+% Spacing
+\parskip=10pt
+\footskip=14.4pt
+
+% Problem/Solution 'containers' where we type our work.
+\newcounter{Problem}
+\newenvironment{Problem}{\newpage \refstepcounter{Problem} 
+   \noindent \textbf{Problem~\theProblem:} \rmfamily}{}
+\newenvironment{Solution}{\par \noindent \textit{Solution:}\rmfamily}{}
+\newenvironment{amatrix}[1]{\left[\begin{array}{@{}*{#1}{c}|c@{}}}{\end{array}\right]}
+\newenvironment{coverpage}{\begin{center}\topskip0pt \vspace*{\fill}}{
+	\vspace{-2in}
+	{\huge\thetitle} \vspace{0.5in} \par
+	{\large \textbf{
+	\thedate}
+	} \par
+	{\large 
+	\course - \cname
+	} \par \vspace{0.05in}
+	{\large 
+	\theprofessor
+	} \par
+	\vspace{0.4in}
+	{\large 
+	\textbf{\theauthor}
+	}
+	\vspace*{\fill} \end{center} 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% EDIT STUFF BELOW
+\title{ASSIGNMENT} 							% Edit this to change the assignment title
+\date{DUE DATE}    							% Edit this to change the due date
+\author{YOUR NAME} 							% Edit this to put your name on the coverpage
+\newcommand{\theprofessor}{Prof. LAST NAME} % Edit this to add professor
+\newcommand{\course}{SUBJECT 101} 			% Edit this to change the course
+\newcommand{\cname}{CLASS NAME} 			% Edit this to change 'name' (e.g. Mathematical Modeling)

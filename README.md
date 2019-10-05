@@ -1,7 +1,9 @@
 # LaTeX Template
 
 ## Basic Usage
-There are two environments you will be mostly using; **Problem** and **Solution**.
+Include Pig.sty (or whatever you renamed it to) at near the top.
+Begin the document with '\cover'
+There are two environments you will be using; **Problem** and **Solution**.
 
 Example:
 
