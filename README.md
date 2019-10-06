@@ -1,4 +1,4 @@
-# LaTeX Template
+# LaTeX Homework Template
 
 ## Basic Usage
 There are three steps to set up your given assignment.
