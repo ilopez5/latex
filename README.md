@@ -32,12 +32,12 @@ You as the user will want to edit a few lines so the cover page and header comes
 
 In order to do so, find and change the following lines in the `.sty` file:
 ```
-\title{ASSIGNMENT} % Edit this to change the assignment title
-\date{DUE DATE} % Edit this to change the due date
-\author{YOUR NAME} % Edit this to put your name on the coverpage
-\newcommand{\theprofessor}{Prof. LAST NAME} % Edit this to add professor
-\newcommand{\course}{SUBJECT 101} % Edit this to change the course
-\newcommand{\cname}{CLASS NAME} % Edit this to change 'name' (e.g. Mathematical Modeling)
+\title{ASSIGNMENT}
+\date{DUE DATE}
+\author{YOUR NAME}
+\newcommand{\theprofessor}{Prof. LAST NAME}
+\newcommand{\course}{SUBJECT 101}
+\newcommand{\cname}{CLASS NAME}
 ```
 
 After this, you are set to begin your `.tex` document. See `test.tex` for a basic template.
