@@ -16,7 +16,7 @@
 \usepackage{eucal}
 \usepackage{bm}
 %\usepackage{graphicx}
-%\usepackage{caption}
+\usepackage{caption}
 
 % Over-full
 \vfuzz2pt
@@ -54,6 +54,15 @@
 
 	% Infinite Limits
 	\newcommand{\ilim}[1]{\lim_{n\to\infty}#1}
+
+	% Quick Graph
+	% Argument 1: file_name.format (e.g. graph.eps)
+	% Argument 2: Caption @ bottom of graph
+	\newcommand{\plot}[2]{\begin{minipage}{\linewidth}
+			\centering
+			\includegraphics[width=10cm]{#1}
+			\captionof{figure}{#2}
+	\end{minipage}}
 
 
 % Standard Notation for Theorems and Lemmas -- I barely use these at all
