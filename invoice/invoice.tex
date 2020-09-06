@@ -1,0 +1,31 @@
+\documentclass{invoice} % use the custom invoice class (invoice.cls)
+
+\begin{document}
+
+% heading
+\hfil{\huge\bf Invoice \#\input{invoice_num.tex}}\hfil%
+\break
+\hrule
+
+\begin{parties}
+	{\payer{John Payer}{Company Inc.}{123 W Main St.\\ \tab Chicago, IL 60657}{payer@example.com}}
+	{\payee{Jane Payee}{Contractor}{456 E Main St.\\ \tab Chicago, IL 60657}{payee@example.com}}
+\end{parties}
+
+{\bf Date: \today} \\
+
+% table of expenses
+\begin{invoiceTable}
+% hourrow or feerow
+
+\feetype{Service-Here} % Fee category description
+
+% date - hours - wage
+\hourrow{May 12, 2020}{8.0}{15}
+\hourrow{May 13, 2020}{8.0}{15}
+\hourrow{May 14, 2020}{8.0}{15}
+
+
+\subtotal
+\end{invoiceTable}
+\end{document}
